@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.islandgreenhousesales.ca)",
+      "WebFetch(domain:plantagreenhouses.ca)",
+      "WebFetch(domain:plantagreenhouses.com)",
+      "Read(//c/Users/rdasa/dev//**)",
+      "Read(//c/Users/rdasa/dev/**)",
+      "WebSearch",
+      "WebFetch(domain:www.greenhousemegastore.com)",
+      "WebFetch(domain:divetogarden.com)",
+      "WebFetch(domain:monarchgreenhouse.com)",
+      "Bash(npm --version)",
+      "WebFetch(domain:www.planta.ca)",
+      "WebFetch(domain:snipcart.com)",
+      "Bash(npx create-next-app@latest:*)"
+    ]
+  }
+}
