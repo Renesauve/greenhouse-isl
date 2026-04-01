@@ -36,3 +36,35 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-forest);
 }
+
+/* Scroll reveal animations */
+.scroll-reveal {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.scroll-fade-in {
+  opacity: 0;
+}
+.scroll-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.scroll-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+.scroll-zoom-in {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+.scroll-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
