@@ -12,150 +12,157 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-charcoal overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-dark/90 via-charcoal to-charcoal" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-forest rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-amber rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-forest-light rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-50" />
+      {/* Hero Section — warm, bright, natural */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-cream via-offwhite to-offwhite">
+        {/* Decorative leaf shapes */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg className="absolute -top-10 -right-20 w-[500px] h-[500px] text-sage/30 rotate-12" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+          </svg>
+          <svg className="absolute -bottom-20 -left-10 w-[400px] h-[400px] text-sage/20 -rotate-45" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+          </svg>
+          <svg className="absolute top-1/3 right-1/4 w-[200px] h-[200px] text-forest/5 rotate-90" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+          </svg>
         </div>
 
-        <Container className="relative py-24 sm:py-32 lg:py-40">
+        <Container className="relative py-28 sm:py-36 lg:py-44">
           <div className="max-w-2xl">
             <ScrollReveal animation="fade-in" duration={500}>
-              <span className="inline-block rounded-full bg-forest/20 border border-forest/30 px-4 py-1.5 text-sm font-medium text-forest-light mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-forest/10 border border-forest/15 px-4 py-2 text-sm font-medium text-forest mb-6">
+                <svg className="h-4 w-4 text-sage-dark" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" />
+                </svg>
                 #1 Planta Dealer in Canada
               </span>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={100}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Premium Greenhouses for{" "}
-                <span className="text-forest-light">Vancouver Island</span>
+              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-dark leading-tight">
+                Grow Year-Round on{" "}
+                <span className="text-forest italic">Vancouver Island</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
-              <p className="mt-6 text-lg text-white/70 max-w-xl">
-                European-manufactured Planta greenhouses built to withstand Canadian winters.
-                Heavy-duty galvanized steel frames, polycarbonate panels, and up to 10-year warranties.
+              <p className="mt-6 text-lg text-earth leading-relaxed max-w-xl">
+                European-crafted Planta greenhouses, built to thrive through BC winters.
+                Galvanized steel frames, polycarbonate panels, and up to 10-year warranties —
+                so you can focus on what you love: growing.
               </p>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={300}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Button href="/greenhouses" size="lg">
-                  Browse Greenhouses
+                  Explore Greenhouses
                 </Button>
-                <Button href="/contact" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
-                  Get a Quote
+                <Button href="/contact" variant="outline" size="lg">
+                  Get a Free Quote
                 </Button>
               </div>
             </ScrollReveal>
           </div>
         </Container>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg className="h-6 w-6 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        {/* Organic bottom wave */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 80" fill="none" className="w-full text-offwhite" preserveAspectRatio="none">
+            <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="currentColor" />
           </svg>
         </div>
       </section>
 
-      {/* Trust Bar - Animated Counters */}
-      <section className="bg-white border-b border-gray-100">
-        <Container className="py-8 sm:py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { end: 10, suffix: " Yr", label: "Manufacturer Warranty", prefix: "Up to " },
-              { end: 100, suffix: " km/h", label: "Wind Resistance", prefix: "" },
-              { end: 6, suffix: " ft", label: "Snow Load (Sungrow)", prefix: "Up to " },
-              { end: 500, suffix: "+", label: "Happy Customers", prefix: "" },
-            ].map((stat) => (
-              <ScrollReveal key={stat.label} animation="fade-up" delay={0}>
-                <div>
-                  <div className="text-3xl sm:text-4xl font-bold text-forest">
-                    <AnimatedCounter end={stat.end} suffix={stat.suffix} prefix={stat.prefix} />
+      {/* Trust Bar — warm, earthy */}
+      <section className="bg-offwhite">
+        <Container className="py-10 sm:py-12">
+          <div className="rounded-2xl bg-cream/80 border border-sage/30 p-8 sm:p-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {[
+                { end: 10, suffix: " Yr", label: "Manufacturer Warranty", prefix: "Up to " },
+                { end: 100, suffix: " km/h", label: "Wind Resistance", prefix: "" },
+                { end: 6, suffix: " ft", label: "Snow Load Capacity", prefix: "Up to " },
+                { end: 500, suffix: "+", label: "Happy Growers", prefix: "" },
+              ].map((stat, i) => (
+                <ScrollReveal key={stat.label} animation="fade-up" delay={i * 80}>
+                  <div>
+                    <div className="text-3xl sm:text-4xl font-serif font-bold text-forest">
+                      <AnimatedCounter end={stat.end} suffix={stat.suffix} prefix={stat.prefix} />
+                    </div>
+                    <div className="text-sm text-earth-light mt-2">{stat.label}</div>
                   </div>
-                  <div className="text-sm text-charcoal/50 mt-2">{stat.label}</div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Process / How It Works */}
+      {/* How It Works — gardening journey */}
       <section className="py-20 sm:py-28 bg-offwhite">
         <Container>
           <ScrollReveal animation="fade-up">
             <div className="text-center mb-16">
-              <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">How It Works</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-                Your Greenhouse in 4 Simple Steps
+              <p className="text-sage-dark font-medium mb-3 italic">From first call to first harvest</p>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
+                Your Greenhouse Journey
               </h2>
-              <p className="mt-3 text-charcoal/60 max-w-xl mx-auto">
-                From consultation to growing — we make it easy to get the perfect greenhouse for your space.
+              <p className="mt-4 text-earth max-w-xl mx-auto leading-relaxed">
+                We walk with you every step of the way — from choosing the right greenhouse to your first season of growing.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {[
               {
-                step: "01",
-                title: "Consultation",
-                description: "Tell us about your space, climate, and growing goals. We'll help you find the perfect fit.",
+                step: "1",
+                title: "Chat With Us",
+                description: "Tell us about your garden, your space, and what you dream of growing. We'll guide you from there.",
                 icon: (
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 ),
               },
               {
-                step: "02",
-                title: "Selection",
-                description: "Choose from our Sungrow or Sigma series with various sizes and configurations.",
+                step: "2",
+                title: "Pick Your Greenhouse",
+                description: "Choose from our Sungrow or Sigma series — we'll help match the size and features to your needs.",
                 icon: (
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
                 ),
               },
               {
-                step: "03",
-                title: "Delivery",
-                description: "We coordinate shipping across Vancouver Island and BC — right to your door.",
+                step: "3",
+                title: "We Deliver to You",
+                description: "Shipped right across Vancouver Island and BC. Pickup options also available in Nanaimo, Victoria & Delta.",
                 icon: (
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 ),
               },
               {
-                step: "04",
+                step: "4",
                 title: "Start Growing",
-                description: "Set up your greenhouse with our support and start your year-round growing journey.",
+                description: "Set it up, plant your first seeds, and enjoy year-round harvests — rain, snow, or shine.",
                 icon: (
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 ),
               },
             ].map((item, i) => (
-              <ScrollReveal key={item.step} animation="fade-up" delay={i * 100}>
-                <div className="relative text-center group">
-                  {/* Step number bg */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-forest/10 text-forest mb-5 group-hover:bg-forest group-hover:text-white transition-colors duration-300">
+              <ScrollReveal key={item.step} animation="fade-up" delay={i * 120}>
+                <div className="relative text-center group bg-white rounded-2xl p-8 border border-sage/20 hover:border-sage/40 hover:shadow-md transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-sage/20 text-forest mb-5 group-hover:bg-forest group-hover:text-white transition-colors duration-300">
                     {item.icon}
                   </div>
-                  <div className="text-xs font-bold text-amber uppercase tracking-widest mb-2">Step {item.step}</div>
-                  <h3 className="text-lg font-bold text-charcoal mb-2">{item.title}</h3>
-                  <p className="text-sm text-charcoal/60 leading-relaxed">{item.description}</p>
-
-                  {/* Connector line (not on last item) */}
-                  {i < 3 && (
-                    <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] border-t-2 border-dashed border-forest/20" />
-                  )}
+                  <div className="text-sm font-serif font-semibold text-amber mb-1">Step {item.step}</div>
+                  <h3 className="text-lg font-bold text-forest-dark mb-2">{item.title}</h3>
+                  <p className="text-sm text-earth leading-relaxed">{item.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -164,23 +171,23 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-28 bg-cream/50">
         <Container>
           <ScrollReveal animation="fade-up">
             <div className="text-center mb-14">
-              <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">Our Collection</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+              <p className="text-sage-dark font-medium mb-3 italic">Handpicked for BC gardens</p>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
                 Popular Greenhouses
               </h2>
-              <p className="mt-3 text-charcoal/60 max-w-xl mx-auto">
-                Our most popular models — built tough for BC weather with premium materials and backed by manufacturer warranties.
+              <p className="mt-4 text-earth max-w-xl mx-auto leading-relaxed">
+                Our most-loved models — built tough for West Coast weather, with premium materials and full manufacturer warranties.
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featured.map((product, i) => (
-              <ScrollReveal key={product.slug} animation="fade-up" delay={i * 100}>
+              <ScrollReveal key={product.slug} animation="fade-up" delay={i * 120}>
                 <ProductCard product={product} />
               </ScrollReveal>
             ))}
@@ -196,68 +203,67 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 sm:py-28 bg-white">
-        <Container>
+      {/* Why Choose Us — warm, earthy feel */}
+      <section className="py-20 sm:py-28 bg-offwhite relative overflow-hidden">
+        {/* Decorative leaf */}
+        <svg className="absolute -bottom-16 -right-16 w-[300px] h-[300px] text-sage/10 rotate-45 pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+          <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+        </svg>
+
+        <Container className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal animation="fade-right">
               <div>
-                <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">Why Choose Us</span>
-                <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-                  We Deliver Quality You Can Trust
+                <p className="text-sage-dark font-medium mb-3 italic">Why gardeners choose us</p>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
+                  Greenhouses That Stand the Test of Time
                 </h2>
-                <p className="mt-4 text-charcoal/60 leading-relaxed">
-                  As Canada&apos;s #1 Planta dealer, we bring you European-engineered greenhouses built for the toughest conditions.
-                  Our personalized service ensures you get exactly the right greenhouse for your needs.
+                <p className="mt-4 text-earth leading-relaxed">
+                  As Canada&apos;s top Planta dealer, we bring you European-engineered greenhouses made for real weather —
+                  not just fair-weather gardening. Personal service from people who actually grow.
                 </p>
               </div>
             </ScrollReveal>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {[
                 {
-                  num: "01",
-                  title: "Built to Last",
-                  description: "Heavy-duty galvanized steel frames and twin-wall polycarbonate panels withstand winds up to 100 km/h and snow loads up to 6 feet.",
+                  title: "Built for BC Weather",
+                  description: "Galvanized steel frames and twin-wall polycarbonate panels handle 100 km/h winds and up to 6 feet of snow. These greenhouses don't just survive winter — they thrive in it.",
                   icon: (
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                   ),
                 },
                 {
-                  num: "02",
-                  title: "Expert Guidance",
-                  description: "We help you choose the right size, series, and accessories based on your space, climate zone, and growing goals.",
+                  title: "Real Advice, Not a Sales Pitch",
+                  description: "We help you pick the right size, series, and accessories for your actual space and growing goals. No upselling — just honest guidance.",
                   icon: (
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   ),
                 },
                 {
-                  num: "03",
-                  title: "Island-Wide Service",
-                  description: "Serving all of Vancouver Island and BC with reliable delivery, local support, and after-sale assistance.",
+                  title: "Local & Island-Wide",
+                  description: "Based in Nanaimo, serving all of Vancouver Island and BC. Pickup in Nanaimo, Victoria & Delta, or delivered to your door.",
                   icon: (
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   ),
                 },
               ].map((item, i) => (
-                <ScrollReveal key={item.num} animation="fade-left" delay={i * 150}>
-                  <div className="flex gap-5 group">
-                    <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-white transition-colors duration-300">
+                <ScrollReveal key={item.title} animation="fade-left" delay={i * 150}>
+                  <div className="flex gap-5 group bg-white rounded-xl p-6 border border-sage/15 hover:border-sage/30 hover:shadow-sm transition-all duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-sage/20 flex items-center justify-center text-forest group-hover:bg-forest group-hover:text-white transition-colors duration-300">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="text-xs font-bold text-amber">{item.num}</span>
-                        <h3 className="text-lg font-bold text-charcoal">{item.title}</h3>
-                      </div>
-                      <p className="text-sm text-charcoal/60 leading-relaxed">{item.description}</p>
+                      <h3 className="text-base font-bold text-forest-dark mb-1">{item.title}</h3>
+                      <p className="text-sm text-earth leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -268,16 +274,16 @@ export default function HomePage() {
       </section>
 
       {/* Series Comparison */}
-      <section className="py-20 sm:py-28 bg-offwhite">
+      <section className="py-20 sm:py-28 bg-cream/50">
         <Container>
           <ScrollReveal animation="fade-up">
             <div className="text-center mb-14">
-              <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">Compare Series</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+              <p className="text-sage-dark font-medium mb-3 italic">Find your perfect fit</p>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
                 Two Series, One Standard of Quality
               </h2>
-              <p className="mt-3 text-charcoal/60 max-w-xl mx-auto">
-                Choose the series that fits your needs and budget. Both are built with heavy-duty galvanized steel and polycarbonate panels.
+              <p className="mt-4 text-earth max-w-xl mx-auto leading-relaxed">
+                Both built with galvanized steel and polycarbonate panels — choose based on your space, budget, and climate.
               </p>
             </div>
           </ScrollReveal>
@@ -285,16 +291,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Sungrow */}
             <ScrollReveal animation="fade-right" delay={100}>
-              <div className="rounded-2xl border-2 border-forest/20 bg-forest/5 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 h-full">
+              <div className="rounded-2xl border border-forest/20 bg-white p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 h-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-forest/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-sage/25 flex items-center justify-center">
                     <svg className="h-5 w-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal">Sungrow Series</h3>
-                    <p className="text-amber font-semibold text-sm">Premium Line</p>
+                    <h3 className="text-2xl font-serif font-bold text-forest-dark">Sungrow Series</h3>
+                    <p className="text-amber font-semibold text-sm">Our Premium Line</p>
                   </div>
                 </div>
                 <ul className="space-y-3 mt-6">
@@ -307,8 +313,8 @@ export default function HomePage() {
                     "Sizes from 6.5 ft to 33 ft long",
                     "Starting at $2,350 CAD",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-charcoal/80">
-                      <svg className="h-5 w-5 text-forest flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li key={item} className="flex items-start gap-3 text-sm text-earth">
+                      <svg className="h-5 w-5 text-sage-dark flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -329,16 +335,16 @@ export default function HomePage() {
 
             {/* Sigma */}
             <ScrollReveal animation="fade-left" delay={200}>
-              <div className="rounded-2xl border-2 border-gray-200 bg-white p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 h-full">
+              <div className="rounded-2xl border border-earth-light/30 bg-white p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 h-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
-                    <svg className="h-5 w-5 text-charcoal/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-10 h-10 rounded-full bg-cream flex items-center justify-center">
+                    <svg className="h-5 w-5 text-earth" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-charcoal">Sigma Series</h3>
-                    <p className="text-amber font-semibold text-sm">Value Line</p>
+                    <h3 className="text-2xl font-serif font-bold text-forest-dark">Sigma Series</h3>
+                    <p className="text-amber font-semibold text-sm">Great Value</p>
                   </div>
                 </div>
                 <ul className="space-y-3 mt-6">
@@ -351,8 +357,8 @@ export default function HomePage() {
                     "Sizes from 13 ft to 32 ft long",
                     "Starting at $2,650 CAD",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-charcoal/80">
-                      <svg className="h-5 w-5 text-forest flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li key={item} className="flex items-start gap-3 text-sm text-earth">
+                      <svg className="h-5 w-5 text-sage-dark flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {item}
@@ -375,16 +381,21 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 sm:py-28 bg-white">
-        <Container>
+      <section className="py-20 sm:py-28 bg-offwhite relative overflow-hidden">
+        {/* Decorative leaves */}
+        <svg className="absolute top-10 -left-10 w-[250px] h-[250px] text-sage/10 -rotate-30 pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+          <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+        </svg>
+
+        <Container className="relative">
           <ScrollReveal animation="fade-up">
             <div className="text-center mb-14">
-              <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">Testimonials</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+              <p className="text-sage-dark font-medium mb-3 italic">From our growing community</p>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
                 What Our Customers Say
               </h2>
-              <p className="mt-3 text-charcoal/60 max-w-xl mx-auto">
-                Hear from greenhouse owners across Vancouver Island and BC who chose Planta.
+              <p className="mt-4 text-earth max-w-xl mx-auto leading-relaxed">
+                Real stories from greenhouse owners across Vancouver Island and BC.
               </p>
             </div>
           </ScrollReveal>
@@ -411,7 +422,7 @@ export default function HomePage() {
               },
             ].map((testimonial, i) => (
               <ScrollReveal key={testimonial.name} animation="fade-up" delay={i * 150}>
-                <div className="bg-offwhite rounded-2xl p-8 h-full flex flex-col hover:shadow-md transition-shadow duration-300">
+                <div className="bg-white rounded-2xl p-8 h-full flex flex-col border border-sage/15 hover:shadow-md transition-shadow duration-300">
                   {/* Stars */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, j) => (
@@ -421,21 +432,19 @@ export default function HomePage() {
                     ))}
                   </div>
 
-                  {/* Quote */}
-                  <p className="text-charcoal/70 leading-relaxed flex-grow italic">
+                  <p className="text-earth leading-relaxed flex-grow">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
 
-                  {/* Author */}
-                  <div className="mt-6 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center">
+                  <div className="mt-6 flex items-center gap-3 pt-5 border-t border-sage/10">
+                    <div className="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
                       <span className="text-sm font-bold text-forest">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <div className="font-semibold text-charcoal text-sm">{testimonial.name}</div>
-                      <div className="text-xs text-charcoal/50">{testimonial.location}</div>
+                      <div className="font-semibold text-forest-dark text-sm">{testimonial.name}</div>
+                      <div className="text-xs text-earth-light">{testimonial.location}</div>
                     </div>
                   </div>
                 </div>
@@ -445,37 +454,44 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Quote Request Form */}
+      {/* Quote Request Form — warm green, not dark/techy */}
       <section className="py-20 sm:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-forest-dark via-forest to-forest-dark" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-amber rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-forest-light rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
+        {/* Organic leaf shapes instead of blur circles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg className="absolute -top-20 -right-20 w-[450px] h-[450px] text-white/5 rotate-45" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+          </svg>
+          <svg className="absolute -bottom-20 -left-10 w-[350px] h-[350px] text-white/5 -rotate-30" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+          </svg>
         </div>
 
         <Container className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal animation="fade-right">
               <div>
-                <span className="inline-block text-sm font-semibold text-amber uppercase tracking-wider mb-3">Get Started</span>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                <p className="text-sage font-medium mb-3 italic">Ready to get growing?</p>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                   Request a Free Quote
                 </h2>
                 <p className="mt-4 text-white/70 leading-relaxed">
-                  Tell us about your greenhouse needs and we&apos;ll provide a personalized quote.
-                  We serve all of Vancouver Island and British Columbia.
+                  Tell us about your greenhouse dreams and we&apos;ll put together a personalized quote.
+                  No pressure — just friendly advice from people who love growing too.
                 </p>
                 <div className="mt-8 space-y-4">
                   {[
-                    "Free personalized consultation",
-                    "Competitive pricing on all Planta models",
-                    "Delivery coordination across BC",
-                    "After-sale support & guidance",
+                    "Friendly, no-pressure consultation",
+                    "Best pricing on all Planta models",
+                    "Delivery across Vancouver Island & BC",
+                    "Ongoing support after your purchase",
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <svg className="h-5 w-5 text-amber flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-sage/30 flex items-center justify-center">
+                        <svg className="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
                       <span className="text-white/80 text-sm">{item}</span>
                     </div>
                   ))}
@@ -490,28 +506,32 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 sm:py-28">
+      {/* CTA Section — warm, inviting */}
+      <section className="py-20 sm:py-28 bg-offwhite">
         <Container>
           <ScrollReveal animation="zoom-in">
-            <div className="rounded-2xl bg-gradient-to-r from-charcoal to-charcoal/90 p-10 sm:p-16 text-center text-white relative overflow-hidden">
-              <div className="absolute inset-0 opacity-5">
-                <div className="absolute -top-20 -right-20 w-80 h-80 bg-forest rounded-full blur-3xl" />
-                <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-amber rounded-full blur-3xl" />
-              </div>
+            <div className="rounded-3xl bg-cream border border-sage/25 p-10 sm:p-16 text-center relative overflow-hidden">
+              {/* Decorative elements */}
+              <svg className="absolute -top-10 -left-10 w-[200px] h-[200px] text-sage/10 rotate-12 pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+                <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+              </svg>
+              <svg className="absolute -bottom-10 -right-10 w-[180px] h-[180px] text-sage/10 -rotate-20 pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+                <path d="M100 0C100 0 130 60 130 100C130 140 100 200 100 200C100 200 70 140 70 100C70 60 100 0 100 0Z" />
+              </svg>
+
               <div className="relative">
-                <h2 className="text-3xl sm:text-4xl font-bold">
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-forest-dark">
                   Ready to Start Growing?
                 </h2>
-                <p className="mt-4 text-white/60 max-w-xl mx-auto">
-                  Contact us for a quote, ask questions, or learn more about which greenhouse is right for your space.
-                  We serve all of Vancouver Island and British Columbia.
+                <p className="mt-4 text-earth max-w-lg mx-auto leading-relaxed">
+                  Whether you&apos;re a seasoned gardener or just getting started, we&apos;d love to help you find the right greenhouse.
+                  Reach out anytime — we&apos;re always happy to chat.
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button href="/contact" variant="secondary" size="lg">
+                  <Button href="/contact" variant="primary" size="lg">
                     Get a Free Quote
                   </Button>
-                  <Button href="/greenhouses" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                  <Button href="/greenhouses" variant="outline" size="lg">
                     Browse Greenhouses
                   </Button>
                 </div>

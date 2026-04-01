@@ -24,7 +24,7 @@ export default function Header() {
   const [moreOpen, setMoreOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <header className="sticky top-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b border-sage/15">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -35,8 +35,8 @@ export default function Header() {
                 <path d="M16 6L8 14h4v12h8V14h4L16 6z" fill="currentColor" />
               </svg>
               <div className="ml-2">
-                <span className="text-lg font-bold text-charcoal leading-none block">Island Greenhouse</span>
-                <span className="text-xs text-forest font-medium tracking-wide">SALES</span>
+                <span className="text-lg font-bold text-forest-dark leading-none block">Island Greenhouse</span>
+                <span className="text-xs text-earth-light font-medium tracking-wide">SALES</span>
               </div>
             </div>
           </Link>
@@ -47,7 +47,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-charcoal/70 hover:text-forest transition-colors"
+                className="text-sm font-medium text-earth hover:text-forest transition-colors"
               >
                 {link.label}
               </Link>
@@ -58,7 +58,7 @@ export default function Header() {
               <button
                 onClick={() => setMoreOpen(!moreOpen)}
                 onBlur={() => setTimeout(() => setMoreOpen(false), 150)}
-                className="flex items-center gap-1 text-sm font-medium text-charcoal/70 hover:text-forest transition-colors"
+                className="flex items-center gap-1 text-sm font-medium text-earth hover:text-forest transition-colors"
               >
                 More
                 <svg className={`h-4 w-4 transition-transform ${moreOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,12 +66,12 @@ export default function Header() {
                 </svg>
               </button>
               {moreOpen && (
-                <div className="absolute top-full right-0 mt-2 w-48 rounded-lg bg-white border border-gray-100 shadow-lg py-2 z-50">
+                <div className="absolute top-full right-0 mt-2 w-48 rounded-xl bg-white border border-sage/20 shadow-lg py-2 z-50">
                   {moreLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="block px-4 py-2 text-sm text-charcoal/70 hover:bg-forest/5 hover:text-forest transition-colors"
+                      className="block px-4 py-2 text-sm text-earth hover:bg-sage/10 hover:text-forest transition-colors"
                       onClick={() => setMoreOpen(false)}
                     >
                       {link.label}
@@ -91,7 +91,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-charcoal"
+            className="lg:hidden p-2 text-earth"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -110,13 +110,13 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white">
+        <div className="lg:hidden border-t border-sage/15 bg-offwhite">
           <div className="px-4 py-4 space-y-3">
             {allLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-base font-medium text-charcoal/70 hover:text-forest transition-colors"
+                className="block text-base font-medium text-earth hover:text-forest transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

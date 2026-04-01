@@ -11,8 +11,8 @@ type ButtonProps = {
 
 const variants = {
   primary: "bg-forest text-white hover:bg-forest-dark shadow-sm",
-  secondary: "bg-amber text-charcoal hover:bg-amber-dark shadow-sm",
-  outline: "border-2 border-forest text-forest hover:bg-forest hover:text-white",
+  secondary: "bg-amber text-white hover:bg-amber-dark shadow-sm",
+  outline: "border-2 border-forest/30 text-forest hover:bg-forest hover:text-white",
 };
 
 const sizes = {
