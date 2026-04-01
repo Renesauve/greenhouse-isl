@@ -47,9 +47,9 @@ export default function HomePage() {
         <Container className="py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "10 Year", label: "Warranty (Sungrow)" },
+              { value: "Up to 10 Yr", label: "Manufacturer Warranty" },
               { value: "100 km/h", label: "Wind Resistance" },
-              { value: "6 ft", label: "Snow Load Rating" },
+              { value: "Up to 6 ft", label: "Snow Load (Sungrow)" },
               { value: "European", label: "Manufacturing" },
             ].map((stat) => (
               <div key={stat.label}>
