@@ -48,7 +48,15 @@
       "Bash(grep -oE '<span[^>]*>[^<]{5,}</span>' /tmp/wayback_igs.html)",
       "Bash(grep -oE '<span[^>]*>[^<]{5,}</span>')",
       "Bash(grep -oE 'Planta[^\"\\\\\\\\]{0,100}')",
-      "WebFetch(domain:timetravel.mementoweb.org)"
+      "WebFetch(domain:timetravel.mementoweb.org)",
+      "Bash(gh repo:*)",
+      "Bash(npx vercel:*)",
+      "Bash(vercel --yes --prod)",
+      "WebFetch(domain:askproject.net)",
+      "Bash(npx next:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
